@@ -57,6 +57,70 @@ MonoBehaviour:
   PostCall: 0
   UseTemps: 0
   SubSpawnersOf: {fileID: 0}
+--- !u!114 &-7072073445826287999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93fc507b1b266014ab43f9ce92622c2a, type: 3}
+  m_Name: SR_DoorwayPlacer-[Modificator]
+  m_EditorClassIdentifier: 
+  Logic: 0
+  Negate: 0
+  Global: 0
+  Enabled: 1
+  Ignore: 0
+  _editor_drawRule: 1
+  CellAllow: 0
+  AllConditionsMet: 1
+  replaceOnTag: _wall
+  CheckMode: 0
+  Offset: {x: 1.43, y: -5.02, z: -1.4}
+  OffsetMode: 0
+  YawRotationOffset: 0
+  RemoveDistance: 1.12
+  DistanceSource: 2
+  DebugDirection: 0
+  DrawDebugGizmos: 0
+--- !u!114 &-6459844895215299945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3630e2a4943f49b40967499fb48c07ee, type: 3}
+  m_Name: SR_FloorPlacer-[Modificator]
+  m_EditorClassIdentifier: 
+  Logic: 0
+  Negate: 0
+  Global: 0
+  Enabled: 1
+  Ignore: 0
+  _editor_drawRule: 1
+  CellAllow: 0
+  AllConditionsMet: 1
+  Mode: 1
+  AlignMode: 0
+  YawOffset: 0
+  DirectOffset: {x: 5.45, y: -1.51, z: -0.47}
+  OffsetMode: 0
+  RotateBy90Only: 1
+  V2: 0
+  Advanced: 0
+  SpawnOnCheck: 3
+  SpawnOnTag: 
+  CheckMode: 0
+  OutsideCondition: 2
+  OutsideOnTag: 
+  CheckOutMode: 0
+  NegateOutsideCheck: 0
 --- !u!114 &-5666931992377571449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105,6 +169,31 @@ MonoBehaviour:
   DirectionalOffset: {x: 0, y: 0, z: 0}
   DirectFrom: 
   CheckMode: 0
+--- !u!114 &-5462280941961205518
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bc77d951f142764987a7f4ca1cf8f61, type: 3}
+  m_Name: SR_SpawningPropability-[Modificator]
+  m_EditorClassIdentifier: 
+  Logic: 0
+  Negate: 0
+  Global: 0
+  Enabled: 1
+  Ignore: 0
+  _editor_drawRule: 1
+  CellAllow: 0
+  AllConditionsMet: 1
+  Propability: 0.123
+  PropabilityMulVariable:
+    name: 
+    requiredType: 1
+    Tooltip: 
 --- !u!114 &-5321465734292492680
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -125,18 +214,58 @@ MonoBehaviour:
   _editor_drawRule: 1
   CellAllow: 0
   AllConditionsMet: 1
-  replaceOnTag: _wall
+  replaceOnTag: 
   CheckMode: 0
   Offset: {x: 0, y: 0, z: 0}
   OffsetMode: 0
-  YawRotationOffset: 0
-  RemoveDistance: 0.1
-  DistanceSource: 0
+  YawRotationOffset: 5.61
+  RemoveDistance: 1.69
+  DistanceSource: 1
   DebugDirection: 0
   DrawDebugGizmos: 0
---- !u!114 &-3984802424330201012
+--- !u!114 &-4221332210275381089
 MonoBehaviour:
   m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3401e8bda3cc91343b11bed2506f2b74, type: 3}
+  m_Name: SR_IfCellContainsTag-[Modificator]
+  m_EditorClassIdentifier: 
+  Logic: 0
+  Negate: 0
+  Global: 0
+  Enabled: 1
+  Ignore: 0
+  _editor_drawRule: 1
+  CellAllow: 0
+  AllConditionsMet: 1
+  Tag: _wall
+  CheckMode: 0
+  UseRotationsCheck: 0
+  OnlyWithSameDirection: 0
+  CompareOffsetsAngle: 181
+  checkSetup:
+    UseRotor: 1
+    Rotor: 0
+    UseCondition: 1
+    Condition: 0
+    ToCheck:
+    - {x: 0, y: 0, z: 0}
+    - {x: 0, y: 0, z: 1}
+    - {x: -1, y: 0, z: 1}
+    - {x: -1, y: 0, z: 0}
+    - {x: -1, y: 0, z: -1}
+    - {x: 0, y: 0, z: -1}
+    - {x: 1, y: 0, z: -1}
+    - {x: 1, y: 0, z: 0}
+    - {x: 1, y: 0, z: 1}
+--- !u!114 &-3984802424330201012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -159,7 +288,7 @@ MonoBehaviour:
   YawOffset: 0
   DirectOffset: {x: 0, y: 0, z: 0}
   OffsetMode: 0
-  RotateBy90Only: 1
+  RotateBy90Only: 0
   V2: 0
   Advanced: 0
   SpawnOnCheck: 3
@@ -203,9 +332,240 @@ MonoBehaviour:
   OffsetMode: 0
   IgnoreOtherMods: 1
   DontCheckAdditionals: 0
---- !u!114 &-1759054075211576851
+--- !u!114 &-3629838784989644201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93fc507b1b266014ab43f9ce92622c2a, type: 3}
+  m_Name: SR_DoorwayPlacer-[Modificator]
+  m_EditorClassIdentifier: 
+  Logic: 0
+  Negate: 0
+  Global: 0
+  Enabled: 1
+  Ignore: 0
+  _editor_drawRule: 1
+  CellAllow: 1
+  AllConditionsMet: 1
+  replaceOnTag: _door
+  CheckMode: 0
+  Offset: {x: 0, y: 0, z: 0}
+  OffsetMode: 0
+  YawRotationOffset: 0
+  RemoveDistance: 0.1
+  DistanceSource: 0
+  DebugDirection: 2
+  DrawDebugGizmos: 0
+--- !u!114 &-3519535780137384258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207e1eaa379db1743a31893a3b87cc58, type: 3}
+  m_Name: SR_BoundedOffset-[Modificator]
+  m_EditorClassIdentifier: 
+  Logic: 0
+  Negate: 0
+  Global: 0
+  Enabled: 1
+  Ignore: 0
+  _editor_drawRule: 1
+  CellAllow: 1
+  AllConditionsMet: 1
+  WorldOffset: {x: 0, y: 17.25, z: 0}
+  DirectionalOffset: {x: 0, y: 0, z: 0}
+  DirectFrom: 
+  CheckMode: 0
+--- !u!114 &-2423981017697995993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 068bcb133e618b74c85f08d30e32ef61, type: 3}
+  m_Name: SR_CallSubSpawner-[Modificator]
+  m_EditorClassIdentifier: 
+  Logic: 0
+  Negate: 0
+  Global: 0
+  Enabled: 1
+  Ignore: 0
+  _editor_drawRule: 1
+  CellAllow: 1
+  AllConditionsMet: 1
+  CallSpawner: -1
+  InheritCoords: 0
+  PostCall: 0
+  UseTemps: 0
+  SubSpawnersOf: {fileID: 0}
+--- !u!114 &-2378213873203717274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 207e1eaa379db1743a31893a3b87cc58, type: 3}
+  m_Name: SR_BoundedOffset-[Modificator]
+  m_EditorClassIdentifier: 
+  Logic: 0
+  Negate: 0
+  Global: 0
+  Enabled: 1
+  Ignore: 0
+  _editor_drawRule: 1
+  CellAllow: 1
+  AllConditionsMet: 1
+  WorldOffset: {x: 0, y: 17.85, z: 0}
+  DirectionalOffset: {x: 0, y: 0, z: 0}
+  DirectFrom: 
+  CheckMode: 0
+--- !u!114 &-2281845802204599240
 MonoBehaviour:
   m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 893e62798003cfc4ba6de159ef003bf2, type: 3}
+  m_Name: SR_WallPlacer-[Modificator]
+  m_EditorClassIdentifier: 
+  Logic: 0
+  Negate: 0
+  Global: 0
+  Enabled: 1
+  Ignore: 0
+  _editor_drawRule: 1
+  CellAllow: 1
+  AllConditionsMet: 1
+  Module: 1
+  CornerMode: 0
+  CornerMode45: 0
+  SpawnOnEachSide: 1
+  UseYLevel: -1
+  AutoRemoveOverlaps: 1
+  SetGhosts: 1
+  Version2: 0
+  Padding: 0
+  YawOffset: 0
+  DirectOffset: {x: 3.6, y: -4.97, z: -6.04}
+  OffsetMode: 0
+  IgnoreOtherMods: 1
+  DontCheckAdditionals: 0
+--- !u!114 &-2274542495297428224
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bc77d951f142764987a7f4ca1cf8f61, type: 3}
+  m_Name: SR_SpawningPropability-[Modificator]
+  m_EditorClassIdentifier: 
+  Logic: 0
+  Negate: 0
+  Global: 0
+  Enabled: 1
+  Ignore: 0
+  _editor_drawRule: 1
+  CellAllow: 1
+  AllConditionsMet: 1
+  Propability: 0.479
+  PropabilityMulVariable:
+    name: 
+    requiredType: 1
+    Tooltip: 
+--- !u!114 &-2201799269361969676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fb9bb48e6362ba4c9c028367d99c3ea, type: 3}
+  m_Name: SR_CheckCollisionInCell-[Modificator]
+  m_EditorClassIdentifier: 
+  Logic: 0
+  Negate: 0
+  Global: 0
+  Enabled: 1
+  Ignore: 0
+  _editor_drawRule: 1
+  CellAllow: 1
+  AllConditionsMet: 1
+  StopOnTagged: _wall
+  CheckMode: 0
+  OffsetColliderOrigin: {x: 0, y: 2.76, z: 1.95}
+  CollisionBoxSize: 0.83
+  CheckAlsoNeightbourCells: 1
+  CheckNeightboursDistance: 1
+  NonUniformScale: {x: 2.02, y: 1, z: 1}
+  Debug: 1
+--- !u!114 &-1832239228392958449
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9327e64f60ac33a4fa5e7efebb9176fb, type: 3}
+  m_Name: SR_GetCoords-[Modificator]
+  m_EditorClassIdentifier: 
+  Logic: 0
+  Negate: 0
+  Global: 0
+  Enabled: 1
+  Ignore: 0
+  _editor_drawRule: 1
+  CellAllow: 0
+  AllConditionsMet: 1
+  GetFromTagged: 
+  CheckMode: 0
+  WorldOffset: {x: 0, y: 0, z: 0}
+  OffsetMode: 0
+  DirectionalOffset: {x: 0, y: 0, z: 0}
+  StackOffset: 0
+  RotationEulerOffset: {x: 0, y: 0, z: 0}
+  GetScale: 0
+  ScaleMultiplier: {x: 1, y: 1, z: 1}
+  RandomOffsets: {x: 0, y: 0, z: 0}
+  RandomLocalRotation: {x: 0, y: 0, z: 0}
+  RandomScale: {x: 0, y: 0, z: 0}
+  PivotOffset: {x: 0, y: 0, z: 0}
+  MultiplyGetted: {x: 1, y: 1, z: 1}
+  DontSpawnIfNoTagged: 0
+  RemoveTagged: 0
+  GetRandomIfMulti: 0
+  RunOnRepetition: 0
+  HelperMode: 0
+  _DrawOffsets: 1
+  _DrawRandomization: 0
+  _DrawAdditionals: 0
+--- !u!114 &-1759054075211576851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -237,6 +597,246 @@ MonoBehaviour:
   OffsetMode: 0
   IgnoreOtherMods: 1
   DontCheckAdditionals: 0
+--- !u!114 &-1456643846602889797
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93fc507b1b266014ab43f9ce92622c2a, type: 3}
+  m_Name: SR_DoorwayPlacer-[Modificator]
+  m_EditorClassIdentifier: 
+  Logic: 0
+  Negate: 0
+  Global: 0
+  Enabled: 1
+  Ignore: 0
+  _editor_drawRule: 1
+  CellAllow: 0
+  AllConditionsMet: 1
+  replaceOnTag: _wall
+  CheckMode: 0
+  Offset: {x: 0, y: 0, z: 0}
+  OffsetMode: 0
+  YawRotationOffset: 0
+  RemoveDistance: 0.1
+  DistanceSource: 0
+  DebugDirection: 0
+  DrawDebugGizmos: 0
+--- !u!114 &-908356004929852802
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9327e64f60ac33a4fa5e7efebb9176fb, type: 3}
+  m_Name: SR_GetCoords-[Modificator]
+  m_EditorClassIdentifier: 
+  Logic: 0
+  Negate: 0
+  Global: 0
+  Enabled: 1
+  Ignore: 0
+  _editor_drawRule: 1
+  CellAllow: 1
+  AllConditionsMet: 1
+  GetFromTagged: _wall
+  CheckMode: 0
+  WorldOffset: {x: 0, y: 0, z: 0}
+  OffsetMode: 0
+  DirectionalOffset: {x: 5.37, y: -0.06, z: 0}
+  StackOffset: 0
+  RotationEulerOffset: {x: 0, y: 0, z: 0}
+  GetScale: 0
+  ScaleMultiplier: {x: 1, y: 1, z: 1}
+  RandomOffsets: {x: 0, y: 0, z: 0}
+  RandomLocalRotation: {x: 0, y: 0, z: 0}
+  RandomScale: {x: 0, y: 0, z: 0}
+  PivotOffset: {x: 0, y: 0, z: 0}
+  MultiplyGetted: {x: 1, y: 1, z: 1}
+  DontSpawnIfNoTagged: 1
+  RemoveTagged: 1
+  GetRandomIfMulti: 0
+  RunOnRepetition: 0
+  HelperMode: 0
+  _DrawOffsets: 1
+  _DrawRandomization: 0
+  _DrawAdditionals: 1
+--- !u!114 &-669311897632905642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c360632d4510a074baef619f3210b541, type: 3}
+  m_Name: SR_CellNeightbours-[Modificator]
+  m_EditorClassIdentifier: 
+  Logic: 0
+  Negate: 0
+  Global: 0
+  Enabled: 1
+  Ignore: 0
+  _editor_drawRule: 1
+  CellAllow: 0
+  AllConditionsMet: 1
+  CheckedCellsMustBe: 1
+  NeightbourNeeds: 0
+  occupiedByTag: _wall
+  CheckMode: 0
+  DirectCheck: 1
+  OffsetOrigin: {x: 0, y: 0, z: 0}
+  placement:
+    lu: 1
+    u: 0
+    ru: 1
+    l: 0
+    m: 0
+    r: 0
+    ld: 1
+    d: 0
+    rd: 1
+    UseAdvancedSetup: 0
+    AdvancedSetup:
+    - {x: -1, y: 0, z: 0}
+    - {x: -1, y: 0, z: -1}
+    - {x: 0, y: 0, z: -1}
+    - {x: 1, y: 0, z: -1}
+    - {x: 1, y: 0, z: 0}
+    - {x: 1, y: 0, z: 1}
+    - {x: -1, y: 0, z: 1}
+    - {x: 0, y: 0, z: 1}
+  quartRotor:
+    q1: 1
+    q2: 0
+    q3: 0
+    q4: 0
+  OverrideRotation: 0
+  initRotation: 0
+  rotorEff: 90
+  spawnOn: 5
+  EachRotor: 0
+  CustomRotors:
+  - 0
+  - 0
+  - 0
+  - 0
+  GetNeightbourPos: 0
+  GetNeightbourRot: 0
+  GetNeightbourScale: 0
+  UseRestrictedDir: 0
+  CustomCellsCheck: 0
+  FullRotGet: 0
+  Check3DAngles: 0
+  RotationSpaceDisplay: 0
+  CheckPosit90: 1
+  CheckNeg90: 1
+  OverridePitchRotation: 1
+  InitPitchRotation: 0
+  NotCheckDefaultPitch: 0
+--- !u!114 &-641138468143179580
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93fc507b1b266014ab43f9ce92622c2a, type: 3}
+  m_Name: SR_DoorwayPlacer-[Modificator]
+  m_EditorClassIdentifier: 
+  Logic: 0
+  Negate: 0
+  Global: 0
+  Enabled: 1
+  Ignore: 0
+  _editor_drawRule: 1
+  CellAllow: 1
+  AllConditionsMet: 1
+  replaceOnTag: _wall
+  CheckMode: 0
+  Offset: {x: 6.34, y: 2.69, z: 0.35}
+  OffsetMode: 0
+  YawRotationOffset: 2.52
+  RemoveDistance: -0.2
+  DistanceSource: 2
+  DebugDirection: 1
+  DrawDebugGizmos: 0
+--- !u!114 &-593327909968375373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c360632d4510a074baef619f3210b541, type: 3}
+  m_Name: SR_CellNeightbours-[Modificator]
+  m_EditorClassIdentifier: 
+  Logic: 0
+  Negate: 0
+  Global: 0
+  Enabled: 1
+  Ignore: 0
+  _editor_drawRule: 1
+  CellAllow: 0
+  AllConditionsMet: 1
+  CheckedCellsMustBe: 0
+  NeightbourNeeds: 1
+  occupiedByTag: 
+  CheckMode: 0
+  DirectCheck: 0
+  OffsetOrigin: {x: 0, y: 0, z: 0}
+  placement:
+    lu: 0
+    u: 0
+    ru: 0
+    l: 0
+    m: 0
+    r: 0
+    ld: 0
+    d: 0
+    rd: 0
+    UseAdvancedSetup: 0
+    AdvancedSetup: []
+  quartRotor:
+    q1: 1
+    q2: 0
+    q3: 0
+    q4: 0
+  OverrideRotation: 1
+  initRotation: 0
+  rotorEff: 90
+  spawnOn: 5
+  EachRotor: 0
+  CustomRotors:
+  - 0
+  - 0
+  - 0
+  - 0
+  GetNeightbourPos: 0
+  GetNeightbourRot: 0
+  GetNeightbourScale: 0
+  UseRestrictedDir: 0
+  CustomCellsCheck: 0
+  FullRotGet: 0
+  Check3DAngles: 0
+  RotationSpaceDisplay: 0
+  CheckPosit90: 1
+  CheckNeg90: 1
+  OverridePitchRotation: 1
+  InitPitchRotation: 0
+  NotCheckDefaultPitch: 0
 --- !u!114 &-145207566629641413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -283,6 +883,41 @@ MonoBehaviour:
     IsSubSpawner: 0
     _EditorDisplaySpawnerHeader: 0
   _EditorDisplayCallOnAll: 0
+--- !u!114 &-88060026211270868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3630e2a4943f49b40967499fb48c07ee, type: 3}
+  m_Name: SR_FloorPlacer-[Modificator]
+  m_EditorClassIdentifier: 
+  Logic: 0
+  Negate: 0
+  Global: 0
+  Enabled: 1
+  Ignore: 0
+  _editor_drawRule: 1
+  CellAllow: 1
+  AllConditionsMet: 1
+  Mode: 0
+  AlignMode: 0
+  YawOffset: 0
+  DirectOffset: {x: 0, y: 3.67, z: 0}
+  OffsetMode: 0
+  RotateBy90Only: 1
+  V2: 0
+  Advanced: 0
+  SpawnOnCheck: 3
+  SpawnOnTag: 
+  CheckMode: 0
+  OutsideCondition: 2
+  OutsideOnTag: 
+  CheckOutMode: 0
+  NegateOutsideCheck: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -331,7 +966,7 @@ MonoBehaviour:
   CellsInstructions:
   - Title: Door Hole
     InstructionType: 1
-    TargetModification: {fileID: 11400000, guid: 7500e28d48a8ac44da90dfc8719e91ef, type: 2}
+    TargetModification: {fileID: 7274758192176459997}
     Tags: Props
     InstructionArgument: 
     Foldout: 1
@@ -374,7 +1009,7 @@ MonoBehaviour:
     MaxGroupDistance: 8
 --- !u!114 &887269229177126004
 MonoBehaviour:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
@@ -396,6 +1031,50 @@ MonoBehaviour:
   DirectionalOffset: {x: 0, y: 0, z: 0}
   DirectFrom: 
   CheckMode: 0
+--- !u!114 &905964001898414471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e97889b021182849bc232b2e99733a0, type: 3}
+  m_Name: SR_LogicBlockIF-[Modificator]
+  m_EditorClassIdentifier: 
+  Logic: 0
+  Negate: 0
+  Global: 0
+  Enabled: 1
+  Ignore: 0
+  _editor_drawRule: 1
+  CellAllow: 1
+  AllConditionsMet: 1
+  Test: 0
+  spawner:
+    Enabled: 1
+    Name: 
+    SpawnerTag: 
+    StampPrefabID: 0
+    Parent: {fileID: 7274758192176459997}
+    Rules: []
+    Mode: 0
+    CellCheckMode: 0
+    _Editor_SpawnerAdvancedOptionsFoldout: 0
+    OnScalledGrid: 0
+    Repeat: 0
+    DontInheritRotations: 0
+    SwitchSpawnedToStatic: 0
+    MultipleToSpawn: 0
+    UseGlobalRules: 0
+    UseParentPackageRules: 0
+    _wasEnablingGlobalRules: 0
+    ScaleAccess: 0
+    DisplayPreviewGUI: 0
+    IsSubSpawner: 0
+    _EditorDisplaySpawnerHeader: 0
+  BlockResult: 0
 --- !u!114 &1171261668934392426
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -499,6 +1178,83 @@ MonoBehaviour:
     name: 
     requiredType: 1
     Tooltip: 
+--- !u!114 &4015031179819944559
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3630e2a4943f49b40967499fb48c07ee, type: 3}
+  m_Name: SR_FloorPlacer-[Modificator]
+  m_EditorClassIdentifier: 
+  Logic: 0
+  Negate: 0
+  Global: 0
+  Enabled: 1
+  Ignore: 0
+  _editor_drawRule: 1
+  CellAllow: 1
+  AllConditionsMet: 1
+  Mode: 0
+  AlignMode: 0
+  YawOffset: 0
+  DirectOffset: {x: 0, y: 0, z: 0}
+  OffsetMode: 0
+  RotateBy90Only: 1
+  V2: 0
+  Advanced: 0
+  SpawnOnCheck: 3
+  SpawnOnTag: 
+  CheckMode: 0
+  OutsideCondition: 2
+  OutsideOnTag: 
+  CheckOutMode: 0
+  NegateOutsideCheck: 0
+--- !u!114 &4122603758987258978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9327e64f60ac33a4fa5e7efebb9176fb, type: 3}
+  m_Name: SR_GetCoords-[Modificator]
+  m_EditorClassIdentifier: 
+  Logic: 0
+  Negate: 0
+  Global: 0
+  Enabled: 1
+  Ignore: 0
+  _editor_drawRule: 1
+  CellAllow: 1
+  AllConditionsMet: 1
+  GetFromTagged: 
+  CheckMode: 0
+  WorldOffset: {x: 0, y: 0, z: 0}
+  OffsetMode: 0
+  DirectionalOffset: {x: 0, y: 0, z: 0}
+  StackOffset: 0
+  RotationEulerOffset: {x: 0, y: 0, z: 0}
+  GetScale: 0
+  ScaleMultiplier: {x: 1, y: 1, z: 1}
+  RandomOffsets: {x: 0, y: 0, z: 0}
+  RandomLocalRotation: {x: 0, y: 0, z: 0}
+  RandomScale: {x: 0, y: 0, z: 0}
+  PivotOffset: {x: 0, y: 0, z: 0}
+  MultiplyGetted: {x: 1, y: 1, z: 1}
+  DontSpawnIfNoTagged: 0
+  RemoveTagged: 0
+  GetRandomIfMulti: 0
+  RunOnRepetition: 0
+  HelperMode: 0
+  _DrawOffsets: 1
+  _DrawRandomization: 0
+  _DrawAdditionals: 0
 --- !u!114 &4488691492885005606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -601,6 +1357,177 @@ MonoBehaviour:
   OverridePitchRotation: 1
   InitPitchRotation: 0
   NotCheckDefaultPitch: 0
+--- !u!114 &5602434646244734888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fbb284ebb8d6e248a1d73790416bbf4, type: 3}
+  m_Name: SR_PerlinNoiseOffset-[Modificator]
+  m_EditorClassIdentifier: 
+  Logic: 0
+  Negate: 0
+  Global: 0
+  Enabled: 1
+  Ignore: 0
+  _editor_drawRule: 1
+  CellAllow: 1
+  AllConditionsMet: 1
+  PosOffset: {x: 0, y: 2.58, z: 0}
+  OffsetMode: 1
+  ApplyMode: 0
+  Space: 1
+  PerlinNoiseScale: {x: 16, y: 76.76}
+  OffsetNoise: {x: 10.9, y: 2.91}
+  SquareSteps: 0.88
+--- !u!114 &6655099998138657043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 893e62798003cfc4ba6de159ef003bf2, type: 3}
+  m_Name: SR_WallPlacer-[Modificator]
+  m_EditorClassIdentifier: 
+  Logic: 0
+  Negate: 0
+  Global: 0
+  Enabled: 1
+  Ignore: 0
+  _editor_drawRule: 1
+  CellAllow: 0
+  AllConditionsMet: 1
+  Module: 2
+  CornerMode: 0
+  CornerMode45: 1
+  SpawnOnEachSide: 0
+  UseYLevel: -1
+  AutoRemoveOverlaps: 1
+  SetGhosts: 0
+  Version2: 0
+  Padding: 0
+  YawOffset: 0
+  DirectOffset: {x: 3.6, y: -4.97, z: -6.04}
+  OffsetMode: 0
+  IgnoreOtherMods: 1
+  DontCheckAdditionals: 0
+--- !u!114 &6835566725378771232
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9327e64f60ac33a4fa5e7efebb9176fb, type: 3}
+  m_Name: SR_GetCoords-[Modificator]
+  m_EditorClassIdentifier: 
+  Logic: 0
+  Negate: 0
+  Global: 0
+  Enabled: 1
+  Ignore: 0
+  _editor_drawRule: 1
+  CellAllow: 1
+  AllConditionsMet: 1
+  GetFromTagged: _wall
+  CheckMode: 0
+  WorldOffset: {x: 0, y: 0, z: 0}
+  OffsetMode: 0
+  DirectionalOffset: {x: 0, y: 0, z: 0}
+  StackOffset: 0
+  RotationEulerOffset: {x: 0, y: 0, z: 0}
+  GetScale: 0
+  ScaleMultiplier: {x: 1, y: 1, z: 1}
+  RandomOffsets: {x: 0, y: 0, z: 0}
+  RandomLocalRotation: {x: 0, y: 0, z: 0}
+  RandomScale: {x: 0, y: 0, z: 0}
+  PivotOffset: {x: 0, y: 0, z: 0}
+  MultiplyGetted: {x: 1, y: 1, z: 1}
+  DontSpawnIfNoTagged: 1
+  RemoveTagged: 1
+  GetRandomIfMulti: 0
+  RunOnRepetition: 0
+  HelperMode: 0
+  _DrawOffsets: 1
+  _DrawRandomization: 0
+  _DrawAdditionals: 1
+--- !u!114 &6900034640120773242
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 893e62798003cfc4ba6de159ef003bf2, type: 3}
+  m_Name: SR_WallPlacer-[Modificator]
+  m_EditorClassIdentifier: 
+  Logic: 0
+  Negate: 0
+  Global: 0
+  Enabled: 1
+  Ignore: 0
+  _editor_drawRule: 1
+  CellAllow: 1
+  AllConditionsMet: 1
+  Module: 0
+  CornerMode: 0
+  CornerMode45: 0
+  SpawnOnEachSide: 1
+  UseYLevel: -1
+  AutoRemoveOverlaps: 1
+  SetGhosts: 0
+  Version2: 0
+  Padding: 0
+  YawOffset: 0
+  DirectOffset: {x: -4.06, y: -4.97, z: -1.66}
+  OffsetMode: 0
+  IgnoreOtherMods: 1
+  DontCheckAdditionals: 0
+--- !u!114 &7241993800300989288
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 893e62798003cfc4ba6de159ef003bf2, type: 3}
+  m_Name: SR_WallPlacer-[Modificator]
+  m_EditorClassIdentifier: 
+  Logic: 0
+  Negate: 0
+  Global: 0
+  Enabled: 1
+  Ignore: 0
+  _editor_drawRule: 1
+  CellAllow: 1
+  AllConditionsMet: 1
+  Module: 0
+  CornerMode: 0
+  CornerMode45: 0
+  SpawnOnEachSide: 1
+  UseYLevel: -1
+  AutoRemoveOverlaps: 1
+  SetGhosts: 0
+  Version2: 0
+  Padding: 0
+  YawOffset: 0
+  DirectOffset: {x: 3.19, y: -5.01, z: -6.46}
+  OffsetMode: 0
+  IgnoreOtherMods: 1
+  DontCheckAdditionals: 0
 --- !u!114 &7274758192176459997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -616,7 +1543,7 @@ MonoBehaviour:
   TemporaryContainer: {fileID: 0}
   Enabled: 1
   ModTag: ground
-  DrawMeshAndBox: 0
+  DrawMeshAndBox: 1
   Combine: 0
   RunEmittersIfContains: 0
   DrawSetupFor: 0
@@ -628,32 +1555,41 @@ MonoBehaviour:
     MainCollider: {fileID: 6053954274619632206, guid: e3210c7b7b160d941b2e709582aa3f6c, type: 3}
     subID: 0
     _refMesh: {fileID: 4072124445477552160, guid: ced74948c5d7c74438bd229400b44871, type: 3}
-    _refCol: {fileID: 0}
+    _refCol: {fileID: 6053954274619632206, guid: e3210c7b7b160d941b2e709582aa3f6c, type: 3}
   - Prefab: {fileID: 3037917938382522270, guid: 6611434873e40fb4598a75535892bbe8, type: 3}
     MainCollider: {fileID: 502841693230814526, guid: 6611434873e40fb4598a75535892bbe8, type: 3}
     subID: 0
     _refMesh: {fileID: -5219073052075809211, guid: ced74948c5d7c74438bd229400b44871, type: 3}
-    _refCol: {fileID: 0}
-  - Prefab: {fileID: 6418197098087488365, guid: 767d5c9add1ad204ca7460017d0278c2, type: 3}
-    MainCollider: {fileID: -2332230670651053533, guid: 767d5c9add1ad204ca7460017d0278c2, type: 3}
-    subID: 0
-    _refMesh: {fileID: -3422930930146390456, guid: ced74948c5d7c74438bd229400b44871, type: 3}
-    _refCol: {fileID: 0}
+    _refCol: {fileID: 502841693230814526, guid: 6611434873e40fb4598a75535892bbe8, type: 3}
   - Prefab: {fileID: 3726928837478139184, guid: a9ceb689716f192408bbd786608d2557, type: 3}
     MainCollider: {fileID: 3088481095668567103, guid: a9ceb689716f192408bbd786608d2557, type: 3}
     subID: 0
     _refMesh: {fileID: -3520815208407235329, guid: ced74948c5d7c74438bd229400b44871, type: 3}
-    _refCol: {fileID: 0}
+    _refCol: {fileID: 3088481095668567103, guid: a9ceb689716f192408bbd786608d2557, type: 3}
+  - Prefab: {fileID: 8700634811868332194, guid: 8311fc96c7fb72445b17a4029db3001f, type: 3}
+    MainCollider: {fileID: 6053954274619632206, guid: 8311fc96c7fb72445b17a4029db3001f, type: 3}
+    subID: 0
+    _refMesh: {fileID: 4072124445477552160, guid: ced74948c5d7c74438bd229400b44871, type: 3}
+    _refCol: {fileID: 6053954274619632206, guid: 8311fc96c7fb72445b17a4029db3001f, type: 3}
+  - Prefab: {fileID: 6418197098087488365, guid: 767d5c9add1ad204ca7460017d0278c2, type: 3}
+    MainCollider: {fileID: -2332230670651053533, guid: 767d5c9add1ad204ca7460017d0278c2, type: 3}
+    subID: 0
+    _refMesh: {fileID: -3422930930146390456, guid: ced74948c5d7c74438bd229400b44871, type: 3}
+    _refCol: {fileID: -2332230670651053533, guid: 767d5c9add1ad204ca7460017d0278c2, type: 3}
+  - Prefab: {fileID: 3037917938382522270, guid: 37ebccfd576a23149833e20e2fd75210, type: 3}
+    MainCollider: {fileID: 502841693230814526, guid: 37ebccfd576a23149833e20e2fd75210, type: 3}
+    subID: 0
+    _refMesh: {fileID: -5219073052075809211, guid: ced74948c5d7c74438bd229400b44871, type: 3}
+    _refCol: {fileID: 502841693230814526, guid: 37ebccfd576a23149833e20e2fd75210, type: 3}
   DrawMultiObjectStamps: 1
   Spawners:
   - Enabled: 1
     Name: Ground
-    SpawnerTag: 
+    SpawnerTag: _ground
     StampPrefabID: 0
     Parent: {fileID: 7274758192176459997}
     Rules:
-    - {fileID: 887269229177126004}
-    - {fileID: -3984802424330201012}
+    - {fileID: 8667112975737747252}
     Mode: 0
     CellCheckMode: 0
     _Editor_SpawnerAdvancedOptionsFoldout: 0
@@ -672,10 +1608,54 @@ MonoBehaviour:
   - Enabled: 1
     Name: Wall
     SpawnerTag: _wall
-    StampPrefabID: 1
+    StampPrefabID: 2
     Parent: {fileID: 7274758192176459997}
     Rules:
-    - {fileID: -3780558523155425919}
+    - {fileID: 6900034640120773242}
+    Mode: 0
+    CellCheckMode: 0
+    _Editor_SpawnerAdvancedOptionsFoldout: 0
+    OnScalledGrid: 0
+    Repeat: 1
+    DontInheritRotations: 0
+    SwitchSpawnedToStatic: 0
+    MultipleToSpawn: 1
+    UseGlobalRules: 1
+    UseParentPackageRules: 1
+    _wasEnablingGlobalRules: 1
+    ScaleAccess: 1
+    DisplayPreviewGUI: 1
+    IsSubSpawner: 0
+    _EditorDisplaySpawnerHeader: 1
+  - Enabled: 1
+    Name: Pillar
+    SpawnerTag: _pillar
+    StampPrefabID: 2
+    Parent: {fileID: 7274758192176459997}
+    Rules:
+    - {fileID: -2281845802204599240}
+    Mode: 0
+    CellCheckMode: 0
+    _Editor_SpawnerAdvancedOptionsFoldout: 0
+    OnScalledGrid: 0
+    Repeat: 1
+    DontInheritRotations: 0
+    SwitchSpawnedToStatic: 0
+    MultipleToSpawn: 0
+    UseGlobalRules: 1
+    UseParentPackageRules: 1
+    _wasEnablingGlobalRules: 1
+    ScaleAccess: 1
+    DisplayPreviewGUI: 1
+    IsSubSpawner: 0
+    _EditorDisplaySpawnerHeader: 1
+  - Enabled: 1
+    Name: HighGround
+    SpawnerTag: _highGround
+    StampPrefabID: 3
+    Parent: {fileID: 7274758192176459997}
+    Rules:
+    - {fileID: -4221332210275381089}
     Mode: 0
     CellCheckMode: 0
     _Editor_SpawnerAdvancedOptionsFoldout: 0
@@ -693,11 +1673,12 @@ MonoBehaviour:
     _EditorDisplaySpawnerHeader: 1
   - Enabled: 1
     Name: Door
-    SpawnerTag: 
-    StampPrefabID: 2
+    SpawnerTag: _door
+    StampPrefabID: 4
     Parent: {fileID: 7274758192176459997}
     Rules:
-    - {fileID: -5321465734292492680}
+    - {fileID: -908356004929852802}
+    - {fileID: -5462280941961205518}
     Mode: 0
     CellCheckMode: 0
     _Editor_SpawnerAdvancedOptionsFoldout: 0
@@ -714,12 +1695,13 @@ MonoBehaviour:
     IsSubSpawner: 0
     _EditorDisplaySpawnerHeader: 1
   - Enabled: 1
-    Name: Pillar
-    SpawnerTag: _pillar
-    StampPrefabID: 3
+    Name: WallLight
+    SpawnerTag: 
+    StampPrefabID: 5
     Parent: {fileID: 7274758192176459997}
     Rules:
-    - {fileID: -1759054075211576851}
+    - {fileID: 6835566725378771232}
+    - {fileID: -2274542495297428224}
     Mode: 0
     CellCheckMode: 0
     _Editor_SpawnerAdvancedOptionsFoldout: 0
@@ -735,12 +1717,100 @@ MonoBehaviour:
     DisplayPreviewGUI: 1
     IsSubSpawner: 0
     _EditorDisplaySpawnerHeader: 1
-  SubSpawners: []
+  SubSpawners:
+  - Enabled: 1
+    Name: Empty
+    SpawnerTag: 
+    StampPrefabID: 4
+    Parent: {fileID: 7274758192176459997}
+    Rules: []
+    Mode: 0
+    CellCheckMode: 0
+    _Editor_SpawnerAdvancedOptionsFoldout: 0
+    OnScalledGrid: 0
+    Repeat: 1
+    DontInheritRotations: 1
+    SwitchSpawnedToStatic: 0
+    MultipleToSpawn: 0
+    UseGlobalRules: 0
+    UseParentPackageRules: 1
+    _wasEnablingGlobalRules: 0
+    ScaleAccess: 1
+    DisplayPreviewGUI: 1
+    IsSubSpawner: 0
+    _EditorDisplaySpawnerHeader: 1
   VariantOf: {fileID: 0}
   _editor_drawStamp: 1
   _editor_drawSpawners: 1
   _editor_drawGlobalRules: 0
   _editor_drawModPackRules: 0
-  _editor_shareSelected: 3
+  _editor_shareSelected: 5
   ParentPreset: {fileID: 11400000}
   ParentPack: {fileID: -145207566629641413}
+--- !u!114 &7995412517793582488
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3401e8bda3cc91343b11bed2506f2b74, type: 3}
+  m_Name: SR_IfCellContainsTag-[Modificator]
+  m_EditorClassIdentifier: 
+  Logic: 0
+  Negate: 0
+  Global: 0
+  Enabled: 1
+  Ignore: 0
+  _editor_drawRule: 1
+  CellAllow: 1
+  AllConditionsMet: 1
+  Tag: _wall
+  CheckMode: 0
+  UseRotationsCheck: 0
+  OnlyWithSameDirection: 0
+  CompareOffsetsAngle: 181
+  checkSetup:
+    UseRotor: 1
+    Rotor: 0
+    UseCondition: 1
+    Condition: 0
+    ToCheck:
+    - {x: 0, y: 0, z: 0}
+--- !u!114 &8667112975737747252
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3630e2a4943f49b40967499fb48c07ee, type: 3}
+  m_Name: SR_FloorPlacer-[Modificator]
+  m_EditorClassIdentifier: 
+  Logic: 0
+  Negate: 0
+  Global: 0
+  Enabled: 1
+  Ignore: 0
+  _editor_drawRule: 1
+  CellAllow: 1
+  AllConditionsMet: 1
+  Mode: 0
+  AlignMode: 0
+  YawOffset: 0
+  DirectOffset: {x: 0, y: 0, z: 0}
+  OffsetMode: 0
+  RotateBy90Only: 1
+  V2: 0
+  Advanced: 0
+  SpawnOnCheck: 3
+  SpawnOnTag: 
+  CheckMode: 0
+  OutsideCondition: 2
+  OutsideOnTag: 
+  CheckOutMode: 0
+  NegateOutsideCheck: 0

@@ -37,12 +37,12 @@ MonoBehaviour:
           Max: 4
       BranchLength:
         Min: 2
-        Max: 2
+        Max: 3
       TargetBranches:
         Min: 7
         Max: 37
       BranchThickness:
-        Min: 1
+        Min: 2
         Max: 4
       CellSets: []
     OptionalShapePreset: {fileID: 0}
