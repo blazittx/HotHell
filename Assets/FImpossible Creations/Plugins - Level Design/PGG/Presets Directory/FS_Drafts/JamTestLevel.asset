@@ -121,6 +121,68 @@ MonoBehaviour:
   OutsideOnTag: 
   CheckOutMode: 0
   NegateOutsideCheck: 0
+--- !u!114 &-5867512087520179526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0acc9caea68f8c4b8c90c5e659b5f87, type: 3}
+  m_Name: SR_Scale-[Modificator]
+  m_EditorClassIdentifier: 
+  Logic: 0
+  Negate: 0
+  Global: 0
+  Enabled: 1
+  Ignore: 0
+  _editor_drawRule: 1
+  CellAllow: 1
+  AllConditionsMet: 1
+  ScaleMultiplier: {x: 1, y: 3, z: 1}
+  ScaleMulVariable:
+    name: 
+    requiredType: 5
+    Tooltip: 
+  RandomizeScale: {x: 0, y: 0, z: 0}
+--- !u!114 &-5729178537966770408
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b496837ae5a0c3b4786589d6fb51e8d5, type: 3}
+  m_Name: SR_MoveRotateScale-[Modificator]
+  m_EditorClassIdentifier: 
+  Logic: 0
+  Negate: 0
+  Global: 0
+  Enabled: 1
+  Ignore: 0
+  _editor_drawRule: 1
+  CellAllow: 1
+  AllConditionsMet: 1
+  EffectOn: 2
+  ApplyMode: 0
+  Space: 0
+  GetCoords: 
+  CheckMode: 0
+  PositionOffset: {x: 0, y: 0, z: 0}
+  OffsetMode: 1
+  OffsetPosVariable:
+    name: 
+    requiredType: 5
+    Tooltip: Set Additive Vector3 Field Variable value to this property
+  RotationOffset: {x: 0, y: 90, z: 0}
+  ScaleMultiplier: {x: 1.8, y: 1.8, z: 1.8}
+  RandomizeOffset: {x: 0, y: 0, z: 0}
+  MaxDegreesSteps: {x: 1, y: 1, z: 1}
+  InheritScaleOffset: 0
 --- !u!114 &-5666931992377571449
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -332,6 +394,31 @@ MonoBehaviour:
   OffsetMode: 0
   IgnoreOtherMods: 1
   DontCheckAdditionals: 0
+--- !u!114 &-3654068083244943637
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bc77d951f142764987a7f4ca1cf8f61, type: 3}
+  m_Name: SR_SpawningPropability-[Modificator]
+  m_EditorClassIdentifier: 
+  Logic: 0
+  Negate: 0
+  Global: 0
+  Enabled: 1
+  Ignore: 0
+  _editor_drawRule: 1
+  CellAllow: 1
+  AllConditionsMet: 1
+  Propability: 0.856
+  PropabilityMulVariable:
+    name: 
+    requiredType: 1
+    Tooltip: 
 --- !u!114 &-3629838784989644201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -361,6 +448,33 @@ MonoBehaviour:
   DistanceSource: 0
   DebugDirection: 2
   DrawDebugGizmos: 0
+--- !u!114 &-3602399441761471014
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 226bc5f4badaab3438244b84b7cee058, type: 3}
+  m_Name: SR_Rotate-[Modificator]
+  m_EditorClassIdentifier: 
+  Logic: 0
+  Negate: 0
+  Global: 0
+  Enabled: 1
+  Ignore: 0
+  _editor_drawRule: 1
+  CellAllow: 1
+  AllConditionsMet: 1
+  GetRotationFromTagged: 
+  CheckMode: 0
+  RotationEulerOffset: {x: 0, y: 0, z: 0}
+  RandomRotation: {x: 6.18, y: 5.73, z: 0}
+  MaxDegreesSteps: {x: 1, y: 1, z: 1}
+  LocalRotation: 1
+  OverrideRotation: 1
 --- !u!114 &-3519535780137384258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -385,6 +499,33 @@ MonoBehaviour:
   DirectionalOffset: {x: 0, y: 0, z: 0}
   DirectFrom: 
   CheckMode: 0
+--- !u!114 &-3492112196458237144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3b50c190e51ffb4a80cb2d070c7441a, type: 3}
+  m_Name: SR_GetPosRotScale-[Modificator]
+  m_EditorClassIdentifier: 
+  Logic: 0
+  Negate: 0
+  Global: 0
+  Enabled: 1
+  Ignore: 0
+  _editor_drawRule: 1
+  CellAllow: 0
+  AllConditionsMet: 1
+  Get: 1
+  GatherBy: 
+  CheckMode: 0
+  Space: 1
+  GetMode: 1
+  ApplyMode: 0
+  GetFromOffsetCell: {x: 0, y: 0, z: 0}
 --- !u!114 &-2423981017697995993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -452,7 +593,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 1
+  CellAllow: 0
   AllConditionsMet: 1
   Module: 1
   CornerMode: 0
@@ -464,7 +605,7 @@ MonoBehaviour:
   Version2: 0
   Padding: 0
   YawOffset: 0
-  DirectOffset: {x: 3.6, y: -4.97, z: -6.04}
+  DirectOffset: {x: 8.01, y: -9.21, z: -9.26}
   OffsetMode: 0
   IgnoreOtherMods: 1
   DontCheckAdditionals: 0
@@ -626,6 +767,105 @@ MonoBehaviour:
   DistanceSource: 0
   DebugDirection: 0
   DrawDebugGizmos: 0
+--- !u!114 &-1407440337660243715
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 893e62798003cfc4ba6de159ef003bf2, type: 3}
+  m_Name: SR_WallPlacer-[Modificator]
+  m_EditorClassIdentifier: 
+  Logic: 0
+  Negate: 0
+  Global: 0
+  Enabled: 1
+  Ignore: 0
+  _editor_drawRule: 1
+  CellAllow: 1
+  AllConditionsMet: 1
+  Module: 0
+  CornerMode: 0
+  CornerMode45: 0
+  SpawnOnEachSide: 1
+  UseYLevel: -1
+  AutoRemoveOverlaps: 1
+  SetGhosts: 0
+  Version2: 0
+  Padding: 0
+  YawOffset: 0
+  DirectOffset: {x: -4.06, y: -2.43, z: -1.66}
+  OffsetMode: 0
+  IgnoreOtherMods: 1
+  DontCheckAdditionals: 0
+--- !u!114 &-1369757974386275121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b496837ae5a0c3b4786589d6fb51e8d5, type: 3}
+  m_Name: SR_MoveRotateScale-[Modificator]
+  m_EditorClassIdentifier: 
+  Logic: 0
+  Negate: 0
+  Global: 0
+  Enabled: 1
+  Ignore: 0
+  _editor_drawRule: 1
+  CellAllow: 1
+  AllConditionsMet: 1
+  EffectOn: 2
+  ApplyMode: 1
+  Space: 0
+  GetCoords: 
+  CheckMode: 0
+  PositionOffset: {x: 0, y: 0, z: 0}
+  OffsetMode: 1
+  OffsetPosVariable:
+    name: 
+    requiredType: 5
+    Tooltip: Set Additive Vector3 Field Variable value to this property
+  RotationOffset: {x: 0, y: 90, z: 0}
+  ScaleMultiplier: {x: 1, y: 1, z: 1}
+  RandomizeOffset: {x: 0, y: 0, z: 0}
+  MaxDegreesSteps: {x: 1, y: 1, z: 1}
+  InheritScaleOffset: 0
+--- !u!114 &-1295357770009918003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a50262e9fb8725c4e8eb0e96f3246b17, type: 3}
+  m_Name: SR_SpawnUntilCollides-[Modificator]
+  m_EditorClassIdentifier: 
+  Logic: 0
+  Negate: 0
+  Global: 0
+  Enabled: 1
+  Ignore: 0
+  _editor_drawRule: 1
+  CellAllow: 1
+  AllConditionsMet: 1
+  StopOnTagged: 
+  CheckMode: 0
+  CollisionBoxSize: 0.9
+  StepTranslation: {x: 4.99, y: 3.22, z: 0}
+  MaxCheckCount: 4
+  JumpThroughCellsEveryStep: 1
+  StopWhenOutOfGrid: 1
+  MinimumBoundsSizes: {x: 0, y: 4.36, z: 0}
+  Debug: 0
 --- !u!114 &-908356004929852802
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -837,6 +1077,40 @@ MonoBehaviour:
   OverridePitchRotation: 1
   InitPitchRotation: 0
   NotCheckDefaultPitch: 0
+--- !u!114 &-383494761924265353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 893e62798003cfc4ba6de159ef003bf2, type: 3}
+  m_Name: SR_WallPlacer-[Modificator]
+  m_EditorClassIdentifier: 
+  Logic: 0
+  Negate: 0
+  Global: 0
+  Enabled: 1
+  Ignore: 0
+  _editor_drawRule: 1
+  CellAllow: 1
+  AllConditionsMet: 1
+  Module: 0
+  CornerMode: 0
+  CornerMode45: 0
+  SpawnOnEachSide: 0
+  UseYLevel: -1
+  AutoRemoveOverlaps: 1
+  SetGhosts: 0
+  Version2: 0
+  Padding: 0
+  YawOffset: 0
+  DirectOffset: {x: 0, y: 0, z: 0}
+  OffsetMode: 0
+  IgnoreOtherMods: 1
+  DontCheckAdditionals: 0
 --- !u!114 &-145207566629641413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1007,6 +1281,72 @@ MonoBehaviour:
     GenerateRelations: 1
     GroupUpToSize: 8
     MaxGroupDistance: 8
+--- !u!114 &58749771674326313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 893e62798003cfc4ba6de159ef003bf2, type: 3}
+  m_Name: SR_WallPlacer-[Modificator]
+  m_EditorClassIdentifier: 
+  Logic: 0
+  Negate: 0
+  Global: 0
+  Enabled: 1
+  Ignore: 0
+  _editor_drawRule: 1
+  CellAllow: 1
+  AllConditionsMet: 1
+  Module: 0
+  CornerMode: 0
+  CornerMode45: 0
+  SpawnOnEachSide: 0
+  UseYLevel: -1
+  AutoRemoveOverlaps: 1
+  SetGhosts: 0
+  Version2: 0
+  Padding: 0
+  YawOffset: 0
+  DirectOffset: {x: 0, y: 0, z: 0}
+  OffsetMode: 0
+  IgnoreOtherMods: 1
+  DontCheckAdditionals: 0
+--- !u!114 &201346160647902449
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 094c68a3bf2d9a349851f593cd6a24eb, type: 3}
+  m_Name: SR_CellDistance-[Modificator]
+  m_EditorClassIdentifier: 
+  Logic: 0
+  Negate: 0
+  Global: 0
+  Enabled: 1
+  Ignore: 0
+  _editor_drawRule: 1
+  CellAllow: 1
+  AllConditionsMet: 1
+  OffsetCellMode: 0
+  OffsetCell: {x: 0, y: 0, z: 0}
+  DistanceMustBe: 1
+  IgnoreSelf: 1
+  DistanceToTagged: 
+  CheckMode: 0
+  Distance: 10.47
+  MeasureIn: 1
+  DistanceMulVariable:
+    name: 
+    requiredType: 1
+    Tooltip: 
 --- !u!114 &887269229177126004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1146,6 +1486,32 @@ MonoBehaviour:
   GetMode: 1
   ApplyMode: 0
   GetFromOffsetCell: {x: 45, y: 76, z: 83}
+--- !u!114 &2535657285420215204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0acc9caea68f8c4b8c90c5e659b5f87, type: 3}
+  m_Name: SR_Scale-[Modificator]
+  m_EditorClassIdentifier: 
+  Logic: 0
+  Negate: 0
+  Global: 0
+  Enabled: 1
+  Ignore: 0
+  _editor_drawRule: 1
+  CellAllow: 1
+  AllConditionsMet: 1
+  ScaleMultiplier: {x: 1, y: 3, z: 1}
+  ScaleMulVariable:
+    name: 
+    requiredType: 5
+    Tooltip: 
+  RandomizeScale: {x: 0, y: 0, z: 0}
 --- !u!114 &3972842041115656468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1384,6 +1750,32 @@ MonoBehaviour:
   PerlinNoiseScale: {x: 16, y: 76.76}
   OffsetNoise: {x: 10.9, y: 2.91}
   SquareSteps: 0.88
+--- !u!114 &6369406123692582784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0acc9caea68f8c4b8c90c5e659b5f87, type: 3}
+  m_Name: SR_Scale-[Modificator]
+  m_EditorClassIdentifier: 
+  Logic: 0
+  Negate: 0
+  Global: 0
+  Enabled: 1
+  Ignore: 0
+  _editor_drawRule: 1
+  CellAllow: 1
+  AllConditionsMet: 1
+  ScaleMultiplier: {x: 1, y: 3, z: 1}
+  ScaleMulVariable:
+    name: 
+    requiredType: 5
+    Tooltip: 
+  RandomizeScale: {x: 0, y: 0, z: 0}
 --- !u!114 &6655099998138657043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1552,10 +1944,10 @@ MonoBehaviour:
   OMultiStamp: {fileID: 0}
   PrefabsList:
   - Prefab: {fileID: 8700634811868332194, guid: e3210c7b7b160d941b2e709582aa3f6c, type: 3}
-    MainCollider: {fileID: 6053954274619632206, guid: e3210c7b7b160d941b2e709582aa3f6c, type: 3}
+    MainCollider: {fileID: 1527694452236052226, guid: e3210c7b7b160d941b2e709582aa3f6c, type: 3}
     subID: 0
     _refMesh: {fileID: 4072124445477552160, guid: ced74948c5d7c74438bd229400b44871, type: 3}
-    _refCol: {fileID: 6053954274619632206, guid: e3210c7b7b160d941b2e709582aa3f6c, type: 3}
+    _refCol: {fileID: 1527694452236052226, guid: e3210c7b7b160d941b2e709582aa3f6c, type: 3}
   - Prefab: {fileID: 3037917938382522270, guid: 6611434873e40fb4598a75535892bbe8, type: 3}
     MainCollider: {fileID: 502841693230814526, guid: 6611434873e40fb4598a75535892bbe8, type: 3}
     subID: 0
@@ -1581,6 +1973,11 @@ MonoBehaviour:
     subID: 0
     _refMesh: {fileID: -5219073052075809211, guid: ced74948c5d7c74438bd229400b44871, type: 3}
     _refCol: {fileID: 502841693230814526, guid: 37ebccfd576a23149833e20e2fd75210, type: 3}
+  - Prefab: {fileID: 3037917938382522270, guid: 0fb243e02656af24881df5785fa7a6c8, type: 3}
+    MainCollider: {fileID: 502841693230814526, guid: 0fb243e02656af24881df5785fa7a6c8, type: 3}
+    subID: 0
+    _refMesh: {fileID: -5219073052075809211, guid: ced74948c5d7c74438bd229400b44871, type: 3}
+    _refCol: {fileID: 502841693230814526, guid: 0fb243e02656af24881df5785fa7a6c8, type: 3}
   DrawMultiObjectStamps: 1
   Spawners:
   - Enabled: 1
@@ -1590,6 +1987,8 @@ MonoBehaviour:
     Parent: {fileID: 7274758192176459997}
     Rules:
     - {fileID: 8667112975737747252}
+    - {fileID: -3654068083244943637}
+    - {fileID: -3602399441761471014}
     Mode: 0
     CellCheckMode: 0
     _Editor_SpawnerAdvancedOptionsFoldout: 0
@@ -1634,6 +2033,7 @@ MonoBehaviour:
     Parent: {fileID: 7274758192176459997}
     Rules:
     - {fileID: -2281845802204599240}
+    - {fileID: -5729178537966770408}
     Mode: 0
     CellCheckMode: 0
     _Editor_SpawnerAdvancedOptionsFoldout: 0
@@ -1702,6 +2102,29 @@ MonoBehaviour:
     Rules:
     - {fileID: 6835566725378771232}
     - {fileID: -2274542495297428224}
+    - {fileID: 201346160647902449}
+    Mode: 0
+    CellCheckMode: 0
+    _Editor_SpawnerAdvancedOptionsFoldout: 0
+    OnScalledGrid: 0
+    Repeat: 1
+    DontInheritRotations: 0
+    SwitchSpawnedToStatic: 0
+    MultipleToSpawn: 0
+    UseGlobalRules: 1
+    UseParentPackageRules: 1
+    _wasEnablingGlobalRules: 1
+    ScaleAccess: 1
+    DisplayPreviewGUI: 1
+    IsSubSpawner: 0
+    _EditorDisplaySpawnerHeader: 1
+  - Enabled: 1
+    Name: 2ndWall
+    SpawnerTag: 
+    StampPrefabID: 6
+    Parent: {fileID: 7274758192176459997}
+    Rules:
+    - {fileID: -1407440337660243715}
     Mode: 0
     CellCheckMode: 0
     _Editor_SpawnerAdvancedOptionsFoldout: 0
@@ -1744,7 +2167,7 @@ MonoBehaviour:
   _editor_drawSpawners: 1
   _editor_drawGlobalRules: 0
   _editor_drawModPackRules: 0
-  _editor_shareSelected: 5
+  _editor_shareSelected: 0
   ParentPreset: {fileID: 11400000}
   ParentPack: {fileID: -145207566629641413}
 --- !u!114 &7995412517793582488
@@ -1779,6 +2202,33 @@ MonoBehaviour:
     Condition: 0
     ToCheck:
     - {x: 0, y: 0, z: 0}
+--- !u!114 &8532845704140598996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3b50c190e51ffb4a80cb2d070c7441a, type: 3}
+  m_Name: SR_GetPosRotScale-[Modificator]
+  m_EditorClassIdentifier: 
+  Logic: 0
+  Negate: 0
+  Global: 0
+  Enabled: 1
+  Ignore: 0
+  _editor_drawRule: 1
+  CellAllow: 1
+  AllConditionsMet: 1
+  Get: 2
+  GatherBy: 
+  CheckMode: 0
+  Space: 1
+  GetMode: 1
+  ApplyMode: 0
+  GetFromOffsetCell: {x: 0, y: 69, z: 0}
 --- !u!114 &8667112975737747252
 MonoBehaviour:
   m_ObjectHideFlags: 1
