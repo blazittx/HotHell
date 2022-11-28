@@ -36,14 +36,14 @@ MonoBehaviour:
           Min: 3
           Max: 4
       BranchLength:
-        Min: 2
-        Max: 3
+        Min: 4
+        Max: 10
       TargetBranches:
-        Min: 7
-        Max: 37
+        Min: 20
+        Max: 40
       BranchThickness:
-        Min: 2
-        Max: 4
+        Min: 3
+        Max: 5
       CellSets: []
     OptionalShapePreset: {fileID: 0}
     InjectMods: []
