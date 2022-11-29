@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EnemyGameObject: {fileID: 8136945868056939388, guid: faec78246da49064da9b6dd605822971, type: 3}
   EnemyCount: 1
-  EnemiesToSpawn: 1000
+  EnemiesToSpawn: 10
 --- !u!33 &4344497423169052242
 MeshFilter:
   m_ObjectHideFlags: 0

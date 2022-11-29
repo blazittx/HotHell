@@ -2856,7 +2856,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdf0b19e2e57ed9449a79b9c8786fc2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerTransform: {fileID: 0}
+  minDistance: 12
+  shotFrequency: 1
+  PlayerTransform: {fileID: 778302226829288810, guid: 37be5f75779d7b54ca5e26504c7140e5, type: 3}
   speed: 10
   gunTip: {fileID: 9197009606603255989}
   bulletPrefab: {fileID: 5330078705830558925, guid: a240d062a93a80047b9b72ef723c5291, type: 3}

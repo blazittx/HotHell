@@ -4,6 +4,15 @@ using UnityEngine;
 
 public class EnemyAiBenim : MonoBehaviour
 {
+    [SerializeField]
+    public float minDistance;
+    [SerializeField]
+    public float shotFrequency;
+    [SerializeField]
+    public float attackTimer;
+    [SerializeField]
+    public float attackCooldown;
+
     public GameObject PlayerTransform;
     public float speed;
     Rigidbody rb;
@@ -22,6 +31,8 @@ public class EnemyAiBenim : MonoBehaviour
     public AudioClip DeathSound;
     AudioSource audioSource;
 
+
+
     [SerializeField] private HealthBarScript _healthBar;
 
 
@@ -38,8 +49,10 @@ public class EnemyAiBenim : MonoBehaviour
 
     private void Start()
     {
-        
-        StartCoroutine(SpawnFireRate(1));
+        attackCooldown = 3;
+        attackTimer = attackCooldown;
+
+        //StartCoroutine(SpawnFireRate(shotFrequency));
         StartCoroutine(SpawnSpeed());
         myAnimator.Play("Spawn");
         
@@ -64,11 +77,19 @@ public class EnemyAiBenim : MonoBehaviour
         rb.MovePosition(pos);
         float distance = Vector3.Distance(transform.position, PlayerTransform.transform.position);
         //Debug.Log(distance);
-        if (distance < 10)
+        if (distance < minDistance)
         {
             speed = 0;
             InAttackState = true;
-            AttackState();
+            if (attackTimer > 0)
+            {
+                attackTimer -= Time.deltaTime;
+            }
+            else if (attackTimer <= 0)
+            {
+                AttackState();
+                attackTimer = attackCooldown;
+            }
         }
         else if(EndedSpawnAnim)
         {
@@ -82,6 +103,7 @@ public class EnemyAiBenim : MonoBehaviour
     {
         myAnimator.SetBool("IsAttacking", true);
         myAnimator.SetBool("IsFollowing", false);
+        Instantiate(bulletPrefab, gunTip.position, Quaternion.identity);
         Vector3 pos = Vector3.MoveTowards(transform.position, PlayerTransform.transform.position, speed * Time.deltaTime);
         rb.MovePosition(pos);
         
@@ -115,16 +137,15 @@ public class EnemyAiBenim : MonoBehaviour
         }
     }
     
-    IEnumerator SpawnFireRate(float FireRateEnemy)
-    {
-        while(true)
-        {
-            
-            Transform Bullet;
-            Bullet = Instantiate(bulletPrefab, gunTip.position, Quaternion.identity);
-            yield return new WaitForSeconds(FireRateEnemy);
-        }
-    }
+    //IEnumerator SpawnFireRate(float FireRateEnemy)
+    //{
+    //    while(true)
+    //    {
+    //        yield return new WaitForSeconds(FireRateEnemy);
+    //        Instantiate(bulletPrefab, gunTip.position, Quaternion.identity);
+    //
+    //    }
+    //}
     IEnumerator SpawnSpeed()
     {
         speed = 0;
