@@ -67,6 +67,14 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: cf208520dbc3047478b99f6fd1ef5e09, type: 2}
+    - target: {fileID: -5952137427811105876, guid: 826f25a0eb94149468323cd5d9d1a8a7, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -5040684172959802633, guid: 826f25a0eb94149468323cd5d9d1a8a7, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -2454470608873619208, guid: 826f25a0eb94149468323cd5d9d1a8a7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -79,6 +87,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 372dc2d08ad0d074e93e090ebcdb8219, type: 2}
+    - target: {fileID: -1169134420412027249, guid: 826f25a0eb94149468323cd5d9d1a8a7, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -657315597025358410, guid: 826f25a0eb94149468323cd5d9d1a8a7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -87,10 +99,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: DoorWay Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 826f25a0eb94149468323cd5d9d1a8a7, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2713963320968867040, guid: 826f25a0eb94149468323cd5d9d1a8a7, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 372dc2d08ad0d074e93e090ebcdb8219, type: 2}
+    - target: {fileID: 5913205866773391320, guid: 826f25a0eb94149468323cd5d9d1a8a7, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6520522437960020469, guid: 826f25a0eb94149468323cd5d9d1a8a7, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9082614536985947209, guid: 826f25a0eb94149468323cd5d9d1a8a7, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 826f25a0eb94149468323cd5d9d1a8a7, type: 3}
 --- !u!1 &3242624723911114754 stripped

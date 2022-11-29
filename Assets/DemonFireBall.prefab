@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 779145714148135314}
   - component: {fileID: 4029761413143706053}
   - component: {fileID: 1332213399199397659}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4820,7 +4820,7 @@ GameObject:
   - component: {fileID: 7976500433540885838}
   - component: {fileID: 2489299299713586954}
   - component: {fileID: -1337164250081319984}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: DemonFireBall
   m_TagString: DemonBullet
   m_Icon: {fileID: 0}

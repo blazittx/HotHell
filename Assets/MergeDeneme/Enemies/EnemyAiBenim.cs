@@ -17,8 +17,10 @@ public class EnemyAiBenim : MonoBehaviour
     public GameObject PlayerTransform;
     public float speed;
     Rigidbody rb;
+    Collider col;
     public Transform gunTip;
     public Transform bulletPrefab;
+    public Transform particleLocation;
     public bool IsInfected;
     public Material InfectedMaterial;
     Material defaultMaterial;
@@ -56,7 +58,7 @@ public class EnemyAiBenim : MonoBehaviour
 
     private void Start()
     {
-        attackCooldown = 3;
+        attackCooldown = 1;
         attackTimer = attackCooldown;
 
         //StartCoroutine(SpawnFireRate(shotFrequency));
@@ -165,7 +167,8 @@ public class EnemyAiBenim : MonoBehaviour
     {
         if (other.gameObject.tag == "Bullet")
         {
-            Instantiate(hitEffect, transform.position, Quaternion.identity);
+            Destroy(other.gameObject, 0.2f);
+            Instantiate(hitEffect, particleLocation.transform.position, Quaternion.identity);
             EnemyDamaged();
             ShootFeedback?.PlayFeedbacks(ImpactPosition.position, Damage);
         }

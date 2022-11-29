@@ -50,29 +50,17 @@ public class WeaponScript : MonoBehaviour
 
             Transform Cone;
             Cone = Instantiate(RevealCone, transformPos.transform.position, Quaternion.identity);
-            Instantiate(coneEffect, conePos.transform.position, Quaternion.identity);
-            Cone.GetComponent<Rigidbody>().AddForce(transform.forward * Time.deltaTime * coneSpeed);
+            //Instantiate(coneEffect, conePos.transform.position, Quaternion.identity);
+            Cone.GetComponent<Rigidbody>().AddForce(transform.forward * Time.deltaTime * coneSpeed * 1000);
             Destroy(Cone.gameObject, 0.2f);
-            //int random = Random.Range(0, 2);
-            //Debug.Log(random);
-            //if (random == 0)
-            //{
-            //    
-            //}
-            //else
-            //{
-            //    audioSource.Play();
-            //    animator.Play("RightHandAttackFinal");
-            //    DelayedAttack();
-            //}
         }
     }
-    void DelayedAttack()
+    public void DelayedAttack()
     {
 
         Transform Bullet;
         Bullet = Instantiate(FireBall, transformPos.transform.position, Quaternion.identity);
-        Instantiate(particleEffect, transformPos.transform.position,Quaternion.identity);
-        Bullet.GetComponent<Rigidbody>().AddForce(transform.forward * Time.deltaTime * speed);
+        Instantiate(particleEffect, transformPos.transform.position, Quaternion.identity);
+        Bullet.GetComponent<Rigidbody>().AddForce(transform.forward * Time.deltaTime * speed * 1000);
     }
 }

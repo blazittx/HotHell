@@ -464,6 +464,7 @@ MonoBehaviour:
   readyToJump: 1
   AvaibleJumps: 1
   jumpForce: 280
+  jumpCounterMovement: 0.2
 --- !u!114 &2131645002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -476,7 +477,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f25df7bbe31139942b378076086450b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerHP: 100
+  playerHealth: 0
+  playerMaxHealth: 0
+  _healthBar: {fileID: 0}
 --- !u!1 &778302226506383869
 GameObject:
   m_ObjectHideFlags: 0
@@ -671,7 +674,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 778302226829288810}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 147.9, y: 2.999, z: 49.59}
+  m_LocalPosition: {x: 603.96, y: 1.7300005, z: 28}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 778302225533652464}
@@ -1484,7 +1487,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FireBall: {fileID: 5330078705830558925, guid: 2604b02e464058a41b9dff9f791fb438, type: 3}
   speed: 200000
+  myAnimator: {fileID: 0}
   transformPos: {fileID: 1695662481}
+  particleEffect: {fileID: 0}
 --- !u!114 &496695395
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1808,6 +1813,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FireBall: {fileID: 5330078705830558925, guid: 2604b02e464058a41b9dff9f791fb438, type: 3}
+  RevealCone: {fileID: 0}
   speed: 200000
+  coneSpeed: 0
   weaponScriptLeft: {fileID: 172596165}
   transformPos: {fileID: 758301508}
+  conePos: {fileID: 0}
+  particleEffect: {fileID: 0}
+  coneEffect: {fileID: 0}

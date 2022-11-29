@@ -43,7 +43,7 @@ MonoBehaviour:
         Max: 40
       BranchThickness:
         Min: 3
-        Max: 5
+        Max: 6
       CellSets: []
     OptionalShapePreset: {fileID: 0}
     InjectMods: []

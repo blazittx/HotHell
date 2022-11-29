@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4617023257094111477}
-  m_Layer: 10
+  m_Layer: 3
   m_Name: conePos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23,12 +23,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 13942894}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.116, z: 1.362}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.6040039, y: -0.166, z: 1.001}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 8329399846415387053}
-  m_RootOrder: 2
+  m_Father: {fileID: 6674050909618986139}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4002461009856645077
 GameObject:
@@ -139,7 +139,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4002461009890374882}
   - component: {fileID: 4002461009890374883}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: LeftHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -246,7 +246,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4002461009932555194}
   - component: {fileID: 4002461009932555195}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: RightHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -479,7 +479,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4002461010278701747}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TransformPosLeft
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -609,7 +609,7 @@ RectTransform:
   m_Children:
   - {fileID: 4002461011220056038}
   m_Father: {fileID: 8329399846415387053}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -706,7 +706,7 @@ MonoBehaviour:
   TargetRectTransform: {fileID: 0}
   ShakeSpeed: 4
   ShakeRange: 0.05
-  OscillationOffset: -1
+  OscillationOffset: 0
   ShakeMainDirection: {x: 0, y: 1, z: 0}
   RandomizeDirection: 1
   ShakeAltDirection: {x: 0, y: 2, z: 0}
@@ -808,7 +808,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: c70e533bb8d7abf4d9fa6d654c45138d, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.373
+  m_Volume: 0.151
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -977,7 +977,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4002461011220125796}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: TransformPosRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1995,7 +1995,7 @@ GameObject:
   - component: {fileID: 8329399845812146179}
   - component: {fileID: 8329399845812146178}
   - component: {fileID: 8329399845812146181}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ParticleRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2012,7 +2012,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.6040039, y: -0.15100014, z: -0.10799861}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 4617023257094111477}
   m_Father: {fileID: 4002461009932555194}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2196,11 +2197,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FireBall: {fileID: 5330078705830558925, guid: 2604b02e464058a41b9dff9f791fb438, type: 3}
   RevealCone: {fileID: 8271613038029542859, guid: 20ff36c286c666c4e845959e245fe003, type: 3}
-  speed: 600000
-  coneSpeed: 200000
+  speed: 200
+  coneSpeed: 300
   weaponScriptLeft: {fileID: 4002461010770985188}
   transformPos: {fileID: 4002461011220125796}
-  conePos: {fileID: 0}
+  conePos: {fileID: 4617023257094111477}
   particleEffect: {fileID: 2797607726163334861, guid: 3f542d6733184a44b9f79ed5f7cad840, type: 3}
   coneEffect: {fileID: 2797607726163334861, guid: 26babc1d4273e9f4da490ad126d79064, type: 3}
 --- !u!1 &7483064466513138651
@@ -2217,7 +2218,7 @@ GameObject:
   - component: {fileID: 4002461010770985190}
   - component: {fileID: 4002461010770985189}
   - component: {fileID: 4002461010770985188}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: ParticleRight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2429,7 +2430,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FireBall: {fileID: 5330078705830558925, guid: b095634a705269e47bda395d2fd72c46, type: 3}
-  speed: 600000
+  speed: 200
   myAnimator: {fileID: 0}
   transformPos: {fileID: 4002461010278701747}
   particleEffect: {fileID: 2797607726163334861, guid: dff1f3da8af91a743bf7fb9dd1604816, type: 3}
@@ -2464,7 +2465,6 @@ Transform:
   m_Children:
   - {fileID: 4002461009932555194}
   - {fileID: 4002461009890374882}
-  - {fileID: 4617023257094111477}
   - {fileID: 4002461010374204618}
   m_Father: {fileID: 4415371331889618052}
   m_RootOrder: 0
@@ -2494,13 +2494,13 @@ Camera:
     height: 1
   near clip plane: 0.01
   far clip plane: 1000
-  field of view: 26.991467
-  orthographic: 1
+  field of view: 60
+  orthographic: 0
   orthographic size: 5
   m_Depth: 1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 136
+    m_Bits: 2248
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -2529,7 +2529,7 @@ MonoBehaviour:
   m_RequiresOpaqueTextureOption: 2
   m_CameraType: 1
   m_Cameras: []
-  m_RendererIndex: -1
+  m_RendererIndex: 0
   m_VolumeLayerMask:
     serializedVersion: 2
     m_Bits: 1

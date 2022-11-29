@@ -31,7 +31,7 @@ public class WeaponScriptLeft : MonoBehaviour
         myAnimator.Play("LeftAttack");
         Transform Bullet;
         Bullet = Instantiate(FireBall, transformPos.transform.position, Quaternion.identity);
-        Instantiate(particleEffect, transformPos.transform.position, Quaternion.identity);
-        Bullet.GetComponent<Rigidbody>().AddForce(transform.forward * Time.deltaTime * speed);
+        //Instantiate(particleEffect, transformPos.transform.position, Quaternion.identity);
+        Bullet.GetComponent<Rigidbody>().AddForce(transform.forward * Time.deltaTime * speed * 1000);
     }
 }

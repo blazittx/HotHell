@@ -770,7 +770,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2417993596475033021}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: ImpactPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -944,7 +944,7 @@ GameObject:
   - component: {fileID: 5851651318426751899}
   - component: {fileID: 8035694608741274019}
   - component: {fileID: 8516060574823059664}
-  m_Layer: 10
+  m_Layer: 5
   m_Name: HealthBar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1046,6 +1046,36 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _healthBar: {fileID: 8973899611651872669}
   EnemyAiBenim: {fileID: 8910351570318496198}
+--- !u!1 &3387988239673470837
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5597012956634744548}
+  m_Layer: 0
+  m_Name: particleLocation
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5597012956634744548
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3387988239673470837}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.946, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8136945868056939388}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3492246356951963819
 GameObject:
   m_ObjectHideFlags: 0
@@ -1819,7 +1849,7 @@ GameObject:
   - component: {fileID: 2509366768175048254}
   - component: {fileID: 2056506643039405254}
   - component: {fileID: 6525665445293281500}
-  m_Layer: 10
+  m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1959,7 +1989,7 @@ GameObject:
   - component: {fileID: 8090924263106100185}
   - component: {fileID: 4651401346016170751}
   - component: {fileID: 8973899611651872669}
-  m_Layer: 10
+  m_Layer: 5
   m_Name: Health
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2469,7 +2499,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8792000821050713350}
   - component: {fileID: 3640438058947081251}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: FloatingTextSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3047,6 +3077,7 @@ Transform:
   - {fileID: 6933086333932100942}
   - {fileID: 8792000821050713350}
   - {fileID: 2417993596475033021}
+  - {fileID: 5597012956634744548}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3119,6 +3150,7 @@ MonoBehaviour:
   speed: 10
   gunTip: {fileID: 9197009606603255989}
   bulletPrefab: {fileID: 5330078705830558925, guid: a240d062a93a80047b9b72ef723c5291, type: 3}
+  particleLocation: {fileID: 5597012956634744548}
   IsInfected: 0
   InfectedMaterial: {fileID: 2100000, guid: 5b6a7f1ec5c8de742981b4b228f3db5d, type: 2}
   myRenderer: {fileID: 3094611343375145952}
@@ -3126,7 +3158,7 @@ MonoBehaviour:
   EnemyMaxHealth: 200
   DamageSound: {fileID: 8300000, guid: daa40d89947371e4987f32543a8dcfdd, type: 3}
   DeathSound: {fileID: 8300000, guid: ba9958f4326855043a51b6c7917970f9, type: 3}
-  hitEffect: {fileID: 2797607726163334861, guid: 4301701f9d9cef4478fcd55c918bd675, type: 3}
+  hitEffect: {fileID: 2797607726163334861, guid: 2a5b39f9351950b4d91ce30754e06d20, type: 3}
   ShootFeedback: {fileID: 3640438058947081251}
   _healthBar: {fileID: 8516060574823059664}
   ImpactPosition: {fileID: 2417993596475033021}
