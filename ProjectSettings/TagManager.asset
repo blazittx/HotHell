@@ -8,6 +8,7 @@ TagManager:
   - Bullet
   - SpawnerContainer
   - DemonBullet
+  - RevealCone
   layers:
   - Default
   - TransparentFX

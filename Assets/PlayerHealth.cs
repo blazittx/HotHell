@@ -4,7 +4,11 @@ using UnityEngine;
 
 public class PlayerHealth : MonoBehaviour
 {
-    public int PlayerHP = 100;
+    public float playerHealth;
+    public float playerMaxHealth;
+
+    [SerializeField] private PlayerHealthBarScript _healthBar;
+
     void Start()
     {
         
@@ -13,7 +17,9 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(PlayerHP <= 0)
+        _healthBar.UpdateHealthBar();
+
+        if (playerHealth <= 0)
         {
             //Playerfuckingddies
         }
@@ -23,7 +29,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (other.gameObject.tag == "DemonBullet")
         {
-            PlayerHP -= 10;
+            playerHealth -= 10;
         }
     }
 }

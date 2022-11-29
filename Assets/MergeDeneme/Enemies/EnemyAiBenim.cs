@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using MoreMountains.Feedbacks;
 
 public class EnemyAiBenim : MonoBehaviour
 {
@@ -8,9 +9,9 @@ public class EnemyAiBenim : MonoBehaviour
     public float minDistance;
     [SerializeField]
     public float shotFrequency;
-    [SerializeField]
+
     public float attackTimer;
-    [SerializeField]
+
     public float attackCooldown;
 
     public GameObject PlayerTransform;
@@ -21,7 +22,8 @@ public class EnemyAiBenim : MonoBehaviour
     public bool IsInfected;
     public Material InfectedMaterial;
     Material defaultMaterial;
-    Renderer myRenderer;
+    [SerializeField]
+    public Renderer myRenderer;
     Animator myAnimator;
     public float EnemyHealth;
     public float EnemyMaxHealth;
@@ -31,15 +33,20 @@ public class EnemyAiBenim : MonoBehaviour
     public AudioClip DeathSound;
     AudioSource audioSource;
 
+    public ParticleSystem hitEffect;
 
 
+
+    [SerializeField]
+    public MMFeedbacks ShootFeedback;
     [SerializeField] private HealthBarScript _healthBar;
+    public Transform ImpactPosition;
+    public float Damage;
 
 
     private void Awake()
     {
         rb = GetComponent<Rigidbody>();
-        myRenderer = GetComponent<Renderer>();
         PlayerTransform = GameObject.FindWithTag("Player"); 
         myAnimator = GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
@@ -77,7 +84,7 @@ public class EnemyAiBenim : MonoBehaviour
         rb.MovePosition(pos);
         float distance = Vector3.Distance(transform.position, PlayerTransform.transform.position);
         //Debug.Log(distance);
-        if (distance < minDistance)
+        if (distance <= minDistance)
         {
             speed = 0;
             InAttackState = true;
@@ -112,8 +119,9 @@ public class EnemyAiBenim : MonoBehaviour
 
 
     }
-    public void EnemyDamaged(float Damage)
+    public void EnemyDamaged()
     {
+        Damage = Random.Range(50, 100);
         EnemyHealth -= Damage;
         AudioSource.PlayClipAtPoint(DamageSound, PlayerTransform.transform.position);
         
@@ -127,15 +135,15 @@ public class EnemyAiBenim : MonoBehaviour
 
 
     }
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.gameObject.tag == "Bullet")
-        {
-           // PlayerTransform.GetComponent<PlayerUISc>().DamageScoreUpgrade();
-            EnemyDamaged(20);
-
-        }
-    }
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    if(collision.gameObject.tag == "Bullet")
+    //    {
+    //       // PlayerTransform.GetComponent<PlayerUISc>().DamageScoreUpgrade();
+    //        EnemyDamaged(20);
+    //
+    //    }
+    //}
     
     //IEnumerator SpawnFireRate(float FireRateEnemy)
     //{
@@ -157,8 +165,15 @@ public class EnemyAiBenim : MonoBehaviour
     {
         if (other.gameObject.tag == "Bullet")
         {
-
-            EnemyDamaged(20);
+            Instantiate(hitEffect, transform.position, Quaternion.identity);
+            EnemyDamaged();
+            ShootFeedback?.PlayFeedbacks(ImpactPosition.position, Damage);
+        }
+        if (other.gameObject.tag == "RevealCone")
+        {
+            //Instantiate(hitEffect, transform.position, Quaternion.identity);
+            IsInfected = true;
         }
     }
+
 }

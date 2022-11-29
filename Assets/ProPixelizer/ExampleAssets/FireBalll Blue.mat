@@ -129,10 +129,10 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _AmbientLight: {r: 0.52, g: 0.44, b: 0.13, a: 4.27}
-    - _BaseColor: {r: 0, g: 0.59772396, b: 1, a: 1}
+    - _BaseColor: {r: 0.7028302, g: 0.8799667, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EdgeHighlightColor: {r: 0, g: 0, b: 0, a: 1}
-    - _EmissionColor: {r: 0, g: 0.7558281, b: 0.8113208, a: 1}
+    - _EmissionColor: {r: 0.504717, g: 0.96650267, b: 1, a: 1}
     - _OutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _PixelGridOrigin: {r: 0, g: 0, b: 0, a: 0}
     - _SpecColor: {r: 0.2, g: 0.2, b: 0.2, a: 1}

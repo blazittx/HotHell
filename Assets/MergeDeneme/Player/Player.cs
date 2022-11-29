@@ -37,6 +37,7 @@ public class Player : MonoBehaviour
     public int AvaibleJumps;
     private float jumpCooldown = 0.25f;
     public float jumpForce = 550f;
+    public float jumpCounterMovement = 0.2f;
 
     //Input
     float x, y;

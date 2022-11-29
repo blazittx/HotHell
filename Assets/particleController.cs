@@ -125,7 +125,7 @@ public class particleController : MonoBehaviour
                 if (hit.transform.gameObject.tag == "Enemy")
                 {
                     Debug.Log("Damaged");
-                    hit.transform.GetComponent<EnemyAiBenim>().EnemyDamaged(20);
+                    hit.transform.GetComponent<EnemyAiBenim>().EnemyDamaged();
                 }
             
         }

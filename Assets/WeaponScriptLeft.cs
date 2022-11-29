@@ -7,8 +7,9 @@ public class WeaponScriptLeft : MonoBehaviour
     public Transform FireBall;
     Rigidbody rb;
     public float speed;
-    Animator myAnimator;
-    public GameObject transformPos;
+    public Animator myAnimator;
+    public Transform transformPos;
+    public ParticleSystem particleEffect;
     AudioSource audioSource;
 
     void Start()
@@ -30,6 +31,7 @@ public class WeaponScriptLeft : MonoBehaviour
         myAnimator.Play("LeftAttack");
         Transform Bullet;
         Bullet = Instantiate(FireBall, transformPos.transform.position, Quaternion.identity);
+        Instantiate(particleEffect, transformPos.transform.position, Quaternion.identity);
         Bullet.GetComponent<Rigidbody>().AddForce(transform.forward * Time.deltaTime * speed);
     }
 }

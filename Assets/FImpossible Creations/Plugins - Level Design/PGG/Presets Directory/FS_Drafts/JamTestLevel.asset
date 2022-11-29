@@ -24,7 +24,7 @@ MonoBehaviour:
   CheckMode: 0
   WorldOffset: {x: 0, y: 0, z: 0}
   OffsetMode: 0
-  DirectionalOffset: {x: -1.23, y: 0, z: -0.95}
+  DirectionalOffset: {x: -1.23, y: 1.05, z: -0.95}
   StackOffset: 0
   RotationEulerOffset: {x: 0, y: 0, z: 0}
   GetScale: 0
@@ -89,10 +89,10 @@ MonoBehaviour:
   Logic: 0
   Negate: 0
   Global: 0
-  Enabled: 1
+  Enabled: 0
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 0
+  CellAllow: 1
   AllConditionsMet: 1
   Tag: _wall
   CheckMode: 0
@@ -589,7 +589,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 0
+  CellAllow: 1
   AllConditionsMet: 1
   Propability: 0.417
   PropabilityMulVariable:
@@ -808,6 +808,38 @@ MonoBehaviour:
   RandomizeOffset: {x: 0, y: 0, z: 0}
   MaxDegreesSteps: {x: 1, y: 1, z: 1}
   InheritScaleOffset: 0
+--- !u!114 &-4293533087288477783
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 094c68a3bf2d9a349851f593cd6a24eb, type: 3}
+  m_Name: SR_CellDistance-[Modificator]
+  m_EditorClassIdentifier: 
+  Logic: 0
+  Negate: 0
+  Global: 0
+  Enabled: 1
+  Ignore: 0
+  _editor_drawRule: 1
+  CellAllow: 1
+  AllConditionsMet: 1
+  OffsetCellMode: 0
+  OffsetCell: {x: 0, y: 0, z: 0}
+  DistanceMustBe: 1
+  IgnoreSelf: 1
+  DistanceToTagged: 
+  CheckMode: 0
+  Distance: 11.54
+  MeasureIn: 1
+  DistanceMulVariable:
+    name: 
+    requiredType: 1
+    Tooltip: 
 --- !u!114 &-4221332210275381089
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1217,7 +1249,7 @@ MonoBehaviour:
   Enabled: 1
   Ignore: 0
   _editor_drawRule: 1
-  CellAllow: 1
+  CellAllow: 0
   AllConditionsMet: 1
   Propability: 0.374
   PropabilityMulVariable:
@@ -2136,7 +2168,7 @@ MonoBehaviour:
   CheckMode: 0
   WorldOffset: {x: 0, y: 0, z: 0}
   OffsetMode: 0
-  DirectionalOffset: {x: -12.69, y: 9.63, z: 5.5}
+  DirectionalOffset: {x: -12.69, y: 10.75, z: 5.5}
   StackOffset: 0
   RotationEulerOffset: {x: 0, y: 0, z: 0}
   GetScale: 0
@@ -2938,7 +2970,7 @@ MonoBehaviour:
   Logic: 0
   Negate: 0
   Global: 0
-  Enabled: 1
+  Enabled: 0
   Ignore: 0
   _editor_drawRule: 1
   CellAllow: 1
@@ -3198,21 +3230,11 @@ MonoBehaviour:
     subID: 0
     _refMesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
     _refCol: {fileID: 3561533063752324597, guid: 318a077396b6b2a44b7ad5f87bf629b1, type: 3}
-  - Prefab: {fileID: 8910351570318496198, guid: faec78246da49064da9b6dd605822971, type: 3}
-    MainCollider: {fileID: 5552226238321752709, guid: faec78246da49064da9b6dd605822971, type: 3}
-    subID: 0
-    _refMesh: {fileID: -7576355592890731366, guid: da6ee4a2553dd024a90bec4e91699178, type: 3}
-    _refCol: {fileID: 5552226238321752709, guid: faec78246da49064da9b6dd605822971, type: 3}
   - Prefab: {fileID: 3726928837478139184, guid: e11844eb6616c2f4a9949c0ccd9b2b2e, type: 3}
     MainCollider: {fileID: 3088481095668567103, guid: e11844eb6616c2f4a9949c0ccd9b2b2e, type: 3}
     subID: 0
     _refMesh: {fileID: 6661692521165382236, guid: 66e9f0955df13b841862f897b789e63b, type: 3}
     _refCol: {fileID: 3088481095668567103, guid: e11844eb6616c2f4a9949c0ccd9b2b2e, type: 3}
-  - Prefab: {fileID: 7088924095778116931, guid: df64dfa98097f764f928e06531842d01, type: 3}
-    MainCollider: {fileID: -218168603972852033, guid: df64dfa98097f764f928e06531842d01, type: 3}
-    subID: 0
-    _refMesh: {fileID: -8185155883099882650, guid: a7c15743ae8f58948975bf83f7afbcc0, type: 3}
-    _refCol: {fileID: 0}
   - Prefab: {fileID: 569891568307502069, guid: e7379f60c99d9514a8995ad7444a1109, type: 3}
     MainCollider: {fileID: 6936389908862250708, guid: e7379f60c99d9514a8995ad7444a1109, type: 3}
     subID: 0
@@ -3380,33 +3402,9 @@ MonoBehaviour:
     IsSubSpawner: 0
     _EditorDisplaySpawnerHeader: 1
   - Enabled: 1
-    Name: DemonEnemy
-    SpawnerTag: 
-    StampPrefabID: 8
-    Parent: {fileID: 7274758192176459997}
-    Rules:
-    - {fileID: -426911800935939506}
-    - {fileID: 913630015140092477}
-    - {fileID: -249284378382964154}
-    Mode: 0
-    CellCheckMode: 0
-    _Editor_SpawnerAdvancedOptionsFoldout: 0
-    OnScalledGrid: 0
-    Repeat: 1
-    DontInheritRotations: 0
-    SwitchSpawnedToStatic: 0
-    MultipleToSpawn: 0
-    UseGlobalRules: 1
-    UseParentPackageRules: 1
-    _wasEnablingGlobalRules: 1
-    ScaleAccess: 1
-    DisplayPreviewGUI: 1
-    IsSubSpawner: 0
-    _EditorDisplaySpawnerHeader: 1
-  - Enabled: 1
     Name: Pillar IN
     SpawnerTag: 
-    StampPrefabID: 9
+    StampPrefabID: 8
     Parent: {fileID: 7274758192176459997}
     Rules:
     - {fileID: -4364185123765725546}
@@ -3450,40 +3448,17 @@ MonoBehaviour:
     IsSubSpawner: 0
     _EditorDisplaySpawnerHeader: 1
   - Enabled: 1
-    Name: Sofa
-    SpawnerTag: 
-    StampPrefabID: 10
-    Parent: {fileID: 7274758192176459997}
-    Rules:
-    - {fileID: 6240269448571039780}
-    - {fileID: -8446661796090966591}
-    - {fileID: 5654844749232723787}
-    Mode: 0
-    CellCheckMode: 0
-    _Editor_SpawnerAdvancedOptionsFoldout: 0
-    OnScalledGrid: 0
-    Repeat: 1
-    DontInheritRotations: 0
-    SwitchSpawnedToStatic: 0
-    MultipleToSpawn: 0
-    UseGlobalRules: 1
-    UseParentPackageRules: 1
-    _wasEnablingGlobalRules: 1
-    ScaleAccess: 1
-    DisplayPreviewGUI: 1
-    IsSubSpawner: 0
-    _EditorDisplaySpawnerHeader: 1
-  - Enabled: 1
     Name: SpawnerManager
     SpawnerTag: 
-    StampPrefabID: 11
+    StampPrefabID: 9
     Parent: {fileID: 7274758192176459997}
     Rules:
     - {fileID: -8766757550589274717}
     - {fileID: -8198711439673485530}
     - {fileID: -6987562418724306432}
+    - {fileID: -4293533087288477783}
     Mode: 0
-    CellCheckMode: 0
+    CellCheckMode: 6
     _Editor_SpawnerAdvancedOptionsFoldout: 0
     OnScalledGrid: 0
     Repeat: 1
@@ -3503,7 +3478,7 @@ MonoBehaviour:
   _editor_drawSpawners: 1
   _editor_drawGlobalRules: 0
   _editor_drawModPackRules: 0
-  _editor_shareSelected: 5
+  _editor_shareSelected: 0
   ParentPreset: {fileID: 11400000}
   ParentPack: {fileID: -145207566629641413}
 --- !u!114 &7995412517793582488
