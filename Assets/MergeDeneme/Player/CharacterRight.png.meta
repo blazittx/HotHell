@@ -72,6 +72,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -162,6 +163,30 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Windows Store Apps
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
     maxTextureSize: 8192
     resizeAlgorithm: 0
     textureFormat: -1
@@ -521,6 +546,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      CharacterRight_0: 4337561091241336486
+      CharacterRight_1: 8191372212160435289
+      CharacterRight_10: -27794079865938010
+      CharacterRight_11: -5669097436181603305
+      CharacterRight_12: -6933458503939120765
+      CharacterRight_13: 4109800513999737647
+      CharacterRight_14: 8233718120905894676
+      CharacterRight_15: -8973083272558471492
+      CharacterRight_2: 8841964542965771910
+      CharacterRight_3: 5116046411062268398
+      CharacterRight_4: 6388554950360357290
+      CharacterRight_5: -5114923550001077047
+      CharacterRight_6: 3143244171747164238
+      CharacterRight_7: -2543383059344557607
+      CharacterRight_8: -6041899122275157001
+      CharacterRight_9: 1280636643551674204
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
