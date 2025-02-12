@@ -135,5 +135,5 @@ jobs:
           OCI_BUCKET_URL: ${{ secrets.OCI_BUCKET_URL }}
         run: |
           curl -X PUT -T ${{ github.workspace }}/Build-${{ matrix.targetPlatform }}.zip \
-            "${OCI_BUCKET_URL}/test/Versions/Build-${{ matrix.targetPlatform }}-${{ env.NEW_VERSION }}.zip"
+            "${OCI_BUCKET_URL}/sadwdawrf/Versions/Build-${{ matrix.targetPlatform }}-${{ env.NEW_VERSION }}.zip"
       
